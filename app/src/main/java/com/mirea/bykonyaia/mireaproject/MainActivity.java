@@ -1,5 +1,6 @@
 package com.mirea.bykonyaia.mireaproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -14,12 +15,15 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.mirea.bykonyaia.mireaproject.databinding.ActivityMainBinding;
+import com.mirea.bykonyaia.mireaproject.labs.lab_7.SignInActivity;
 
 public class MainActivity extends AppCompatActivity {
-
-    private AppBarConfiguration mAppBarConfiguration;
-    private ActivityMainBinding binding;
+    private static final String TAG = MainActivity.class.getSimpleName();
+    private AppBarConfiguration mAppBarConfiguration = null;
+    private ActivityMainBinding binding = null;
+    private FirebaseAuth mAuth = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        mAuth = FirebaseAuth.getInstance();
+        CheckCurrentState();
     }
 
     @Override
@@ -59,11 +66,21 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+
+    private void CheckCurrentState() {
+        if(mAuth.getCurrentUser() == null) {
+            startActivity(new Intent(this, SignInActivity.class));
+        }
+    }
+    public void OnSignOutButtonClicked(View v) {
+        mAuth.signOut();
+        CheckCurrentState();
     }
 }

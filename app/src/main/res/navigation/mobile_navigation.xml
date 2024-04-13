@@ -38,18 +38,24 @@
     <fragment
         android:id="@+id/lab_4_background_worker"
         android:name="com.mirea.bykonyaia.mireaproject.labs.lab_4.BackgroundWorkerFragment"
-        android:label="Web"
+        android:label="Lab 4: background worker"
         tools:layout="@layout/fragment_background_worker" />
 
     <fragment
         android:id="@+id/lab_5_profile_view"
         android:name="com.mirea.bykonyaia.mireaproject.labs.lab_5.Lab5WindowFragment"
-        android:label="Web"
+        android:label="Lab 5: profile"
         tools:layout="@layout/fragment_lab5_window" />
 
     <fragment
         android:id="@+id/lab_6_view"
         android:name="com.mirea.bykonyaia.mireaproject.labs.lab_6.Lab6WindowFragment"
-        android:label="Web"
+        android:label="Lab 6"
         tools:layout="@layout/fragment_lab6_window" />
+
+    <fragment
+        android:id="@+id/lab_7_remote_data_view"
+        android:name="com.mirea.bykonyaia.mireaproject.labs.lab_7.ShowDataFragment"
+        android:label="Lab 7: remote resource"
+        tools:layout="@layout/fragment_show_data" />
 </navigation>

@@ -31,5 +31,8 @@
         <item
             android:id="@+id/lab_6_view"
             android:title="Lab 6" />
+        <item
+            android:id="@+id/lab_7_remote_data_view"
+            android:title="Lab 7: remote data" />
     </group>
 </menu>
