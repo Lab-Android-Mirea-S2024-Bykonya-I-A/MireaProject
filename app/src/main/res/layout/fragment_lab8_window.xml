@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".labs.lab_8.Lab8WindowFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <fragment
+            android:id="@+id/points_of_interest_map"
+            android:name="com.mirea.bykonyaia.mireaproject.labs.lab_8.PointsOfInterestMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <fragment
+            android:id="@+id/points_of_interest_list"
+            android:name="com.mirea.bykonyaia.mireaproject.labs.lab_8.PointsOfInterestListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/update_points_button"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:clickable="true"
+        android:contentDescription="Update points of interest button"
+        android:onClick="OnUpdatePointsOfInterestButtonClicked"
+        android:src="@android:drawable/btn_plus"/>
+
+</FrameLayout>

@@ -58,4 +58,9 @@
         android:name="com.mirea.bykonyaia.mireaproject.labs.lab_7.ShowDataFragment"
         android:label="Lab 7: remote resource"
         tools:layout="@layout/fragment_show_data" />
+    <fragment
+        android:id="@+id/lab_8_map_view"
+        android:name="com.mirea.bykonyaia.mireaproject.labs.lab_8.Lab8WindowFragment"
+        android:label="Lab 7: remote resource"
+        tools:layout="@layout/fragment_show_data" />
 </navigation>
