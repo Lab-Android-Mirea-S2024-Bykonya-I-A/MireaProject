@@ -1,4 +1,4 @@
-package com.mirea.bykonyaia.mireaproject.lab_4;
+package com.mirea.bykonyaia.mireaproject.labs.lab_4;
 
 import android.content.Context;
 import android.util.Log;

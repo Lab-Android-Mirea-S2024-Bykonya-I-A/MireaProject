@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".labs.lab_5.Lab5WindowFragment" >
+
+    <fragment
+        android:id="@+id/profile_photo"
+        android:name="com.mirea.bykonyaia.mireaproject.labs.lab_5.ProfilePhotoFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5" />
+
+    <fragment
+        android:id="@+id/profile_voice"
+        android:name="com.mirea.bykonyaia.mireaproject.labs.lab_5.VoiceRecordFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <fragment
+        android:id="@+id/distance_sensor"
+        android:name="com.mirea.bykonyaia.mireaproject.labs.lab_5.DistanceSensorFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+</LinearLayout>

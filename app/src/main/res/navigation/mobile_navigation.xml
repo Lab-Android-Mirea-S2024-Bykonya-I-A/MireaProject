@@ -37,7 +37,13 @@
 
     <fragment
         android:id="@+id/lab_4_background_worker"
-        android:name="com.mirea.bykonyaia.mireaproject.lab_4.BackgroundWorkerFragment"
+        android:name="com.mirea.bykonyaia.mireaproject.labs.lab_4.BackgroundWorkerFragment"
         android:label="Web"
         tools:layout="@layout/fragment_background_worker" />
+
+    <fragment
+        android:id="@+id/lab_5_profile_view"
+        android:name="com.mirea.bykonyaia.mireaproject.labs.lab_5.Lab5WindowFragment"
+        android:label="Web"
+        tools:layout="@layout/fragment_lab5_window" />
 </navigation>

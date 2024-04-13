@@ -1,4 +1,4 @@
-package com.mirea.bykonyaia.mireaproject.lab_4;
+package com.mirea.bykonyaia.mireaproject.labs.lab_4;
 
 import android.os.Bundle;
 
@@ -12,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.mirea.bykonyaia.mireaproject.R;
 import com.mirea.bykonyaia.mireaproject.databinding.FragmentBackgroundWorkerBinding;
 
 /**
