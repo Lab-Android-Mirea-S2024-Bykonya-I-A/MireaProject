@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.mirea.bykonyaia.mireaproject.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.mirea.bykonyaia.mireaproject.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.mirea.bykonyaia.mireaproject.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/custom_data_view"
+        android:name="com.mirea.bykonyaia.mireaproject.ui.data.DataFragment"
+        android:label="Data"
+        tools:layout="@layout/fragment_data" />
+
+    <fragment
+        android:id="@+id/custom_web_view"
+        android:name="com.mirea.bykonyaia.mireaproject.ui.webview.WebViewFragment"
+        android:label="Web"
+        tools:layout="@layout/fragment_web_view" />
+
+    <fragment
+        android:id="@+id/lab_4_background_worker"
+        android:name="com.mirea.bykonyaia.mireaproject.lab_4.BackgroundWorkerFragment"
+        android:label="Web"
+        tools:layout="@layout/fragment_background_worker" />
+</navigation>
