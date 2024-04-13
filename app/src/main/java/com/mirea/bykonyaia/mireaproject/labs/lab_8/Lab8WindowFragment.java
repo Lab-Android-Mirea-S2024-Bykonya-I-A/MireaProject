@@ -45,6 +45,9 @@ public class Lab8WindowFragment extends Fragment {
         list_view = (PointsOfInterestListFragment)getChildFragmentManager().findFragmentById(R.id.points_of_interest_list);
         map_view = (PointsOfInterestMapFragment)getChildFragmentManager().findFragmentById(R.id.points_of_interest_map);
 
+        binding.updatePointsButton.setOnClickListener(v -> {
+            UpdatePointsOfInterest();
+        });
         list_view.listener = new OnSelectPointOfInterestListener() {
             @Override
             public void onPointOfInterestSelect(PointsOfInterestDto point) {
@@ -94,6 +97,7 @@ public class Lab8WindowFragment extends Fragment {
                         PackageManager.PERMISSION_GRANTED == ContextCompat.checkSelfPermission(getActivity(), android.Manifest.permission.ACCESS_BACKGROUND_LOCATION) &&
                         PackageManager.PERMISSION_GRANTED == ContextCompat.checkSelfPermission(getActivity(), android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
+        Log.i("HE_HE", is_permissions_granted ? "YES" : "NO");
         if(!is_permissions_granted) {
             ActivityCompat.requestPermissions(getActivity(),
                     new	String[] { android.Manifest.permission.INTERNET,
@@ -115,12 +119,12 @@ public class Lab8WindowFragment extends Fragment {
             getActivity().finish();
         }
     }
-    public void OnUpdatePointsOfInterestButtonClicked(View v) {
-        UpdatePointsOfInterest();
-    }
     private void UpdatePointsOfInterest() {
+        Log.i("HE_HE", "UpdatePointsOfInterest");
         if(is_permissions_granted)
             new RequestPointsOfInterestList().execute();
+        else
+            MakePermissionsRequest();
     }
 
     private class BaseHttpRequestTask extends AsyncTask<Void, Void, String> {
@@ -168,6 +172,7 @@ public class Lab8WindowFragment extends Fragment {
     private class RequestPointsOfInterestList extends BaseHttpRequestTask {
         public RequestPointsOfInterestList() {
             super("http://178.208.86.244:8000/points.json", "GET");
+            Log.i("HE_HE", "RequestPointsOfInterestList");
         }
 
         @Override
