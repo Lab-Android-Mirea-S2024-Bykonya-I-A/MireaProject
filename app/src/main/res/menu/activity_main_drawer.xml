@@ -28,5 +28,8 @@
         <item
             android:id="@+id/lab_5_profile_view"
             android:title="Lab 5: profile view" />
+        <item
+            android:id="@+id/lab_6_view"
+            android:title="Lab 6" />
     </group>
 </menu>

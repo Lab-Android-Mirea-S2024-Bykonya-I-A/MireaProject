@@ -46,4 +46,10 @@
         android:name="com.mirea.bykonyaia.mireaproject.labs.lab_5.Lab5WindowFragment"
         android:label="Web"
         tools:layout="@layout/fragment_lab5_window" />
+
+    <fragment
+        android:id="@+id/lab_6_view"
+        android:name="com.mirea.bykonyaia.mireaproject.labs.lab_6.Lab6WindowFragment"
+        android:label="Web"
+        tools:layout="@layout/fragment_lab6_window" />
 </navigation>
